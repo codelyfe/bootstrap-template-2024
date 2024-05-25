@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #00e0ff;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('path-to-your-futuristic-image.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .hero .btn {
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #00e0ff, #ff00d4);
+            border: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .hero .btn:hover {
+            background: linear-gradient(45deg, #ff00d4, #00e0ff);
+            transform: scale(1.05);
+        }
+        .about, .services, .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .about h2, .services h2, .contact h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .about p, .services p, .contact p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+        .services .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .services .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .services .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .services .card p {
+            font-size: 1rem;
+        }
+        .contact .email-link {
+            font-size: 1.5rem;
+            color: #00e0ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact .email-link:hover {
+            color: #ff00d4;
+        }
+        .footer {
+            position: relative;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, #00e0ff, #ff00d4);
+            border-radius: 50%;
+        }
+        .footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer .social-icons a:hover {
+            color: #00e0ff;
+        }
+        .footer p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">FutureSite</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to the Future</h1>
+            <p>Your journey to the next era begins here.</p>
+            <a href="#explore" class="btn">Explore Now</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are pioneers in futuristic technologies, leading the way into the next era with cutting-edge solutions and innovations. Our mission is to create a better, more connected future for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>AI Development</h3>
+                        <p>Building intelligent systems that enhance human capabilities and revolutionize industries with advanced AI solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>Blockchain Technology</h3>
+                        <p>Implementing secure and transparent blockchain solutions to transform transactions and data management.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h3>Virtual Reality</h3>
+                        <p>Creating immersive virtual experiences that transport users to new worlds and redefine entertainment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For any inquiries or more information, please reach out to us at:</p>
+            <a href="mailto:info@futuresite.com" class="email-link">info@futuresite.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2024 FutureSite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
