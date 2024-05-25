@@ -1,4 +1,4 @@
 # bootstrap-template-2024
 Simple one page bootstrap template.
 ## Includes
-Futuristic Dark & Pink Theme
+Futuristic (1) Dark, (1) Pink, & (1) white/red Theme
